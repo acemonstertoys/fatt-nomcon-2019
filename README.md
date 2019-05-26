@@ -25,7 +25,8 @@ To run the code in PROJECTS directory complete the following steps:
 
 NOTE: Use "python3" and NOT "python", in step 11 or you will get run time errors!!!
 
-Note: If not running this code on a Pi3+ change the CONFIG string on line #10 of install.py
+NOTE: If not running this code on a Pi3+ change the CONFIG string on line #10 of install.py
+
 
 ***
 RPi.GPIO-0.5.11:
@@ -34,9 +35,8 @@ https://pypi.org/project/RPi.GPIO/0.5.11/
 
 We will be updating to 0.6.5 https://pypi.org/project/RPi.GPIO/0.6.5/ with further test
 
+
 ***
 CompressedLibraryCode:
 
 All external library source code downloaded from author with ZERO changes
-
-***
