@@ -12,10 +12,15 @@ To run the code in PROJECTS directory complete the following steps:
 
 1) Download this FULL git repo onto a Raspberry Pi 3 B+
 2) Use sudo raspi-congig Linux terminal command to setup setup Pi for use
+
 2.1) Use DOWN ARROW and ENTER keys to select Options 5 "Interfacing Options"
+
 2.2) Use DOWN ARROW and ENTER ENter to select P2 SSH, P4 SPI, P5 I2C, and P7 1-Wire
+
 2.3) Use ENTER key to select "<yes>" to enable all four features in step 2.2 above.
+
 2.4) Repeat steps 2.1 to 2.3 for all four features in step 2.2 above.
+
 2.5) Use RIGHT ARROW and ENTER keys to select "<finish>"
 3) Use "cd fatt-nomcon-2019" command to navigate to the highest level directory
 4) Use "python install.py" command to auto install on the necessary libraries
