@@ -234,8 +234,8 @@ class Actuator:
 
 if __name__ == "__main__":
 	print("ACTUATOR.PY: START MAIN")
-	lock = gpiozero.OutputDevice(8) #BCM-8
+	lock = OutputDevice(8) #BCM-8
 	lock.on()
-	time.sleep(20) #seconds of milliseconds?
+	time.sleep(1.5) #Pause 1.5 seconds = 1500 milliseconds
 	lock.off()
 	print("ACTUATOR.PY: END MAIN")
