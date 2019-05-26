@@ -18,6 +18,7 @@ To run the code in PROJECTS directory complete the following steps:
 6) Open ANY web browser and type http://localhost:8000 into URL box (Google Chrome tested)
 
 NOTE: Use "python3" and NOT "python", in step 5 or you will get run time errors!!!
+Note: If not running this code on a Pi3+ change the CONFIG string on line #10 of install.py
 
 ***
 RPi.GPIO-0.5.11:
