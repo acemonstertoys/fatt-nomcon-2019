@@ -4,7 +4,7 @@ __author__ =  "Blaze Sanders"
 __email__ =   "blaze.d.a.sanders@gmail.com"
 __company__ = "Ace Monster Toys"
 __status__ =  "Development"
-__date__ =    "Late Updated: 2019-05-26"
+__date__ =    "Late Updated: 2019-05-29"
 __doc__ =     "Class to operate at least 8 servos, 4 relays, and 4 motors at once with latency less then 100 ms"
 
 # Useful documentation:
@@ -68,7 +68,15 @@ class Actuator:
 	VCC_5V = "BOARD2"        # 5 Volts @ upto ??? Amps = ??? Watts
 	VCC_3_3V = "BOARD1"      # 3.3 Volts @ upto ??? Amps =  ??? Watts
 	GND = "BOARD6&9&14&20&25&30&34&39"
-	PWR_12V = -4
+	
+	PWR_12V = "J10-Pin2"
+	LOCK_GND = "J12_Pin1"
+	LOCK_PWR = "J12_Pin2"
+	
+	#RFID P/N ??? Reads & Writes using Wiegand interface usi RPi using 5V
+	RFID_D0 = "GREEN_WIRE_J?_Pin?"
+	RFID_D1 = "WHITE_WIRE_J?_Pin?"
+	
 
 	# Raspberry Pi B+ refernce pin constants as defined in ???rc.local script???
 	NUM_GPIO_PINS = 8                       # Outputs: GPO0 to GPO3 Inputs: GPI0 to GPI3
