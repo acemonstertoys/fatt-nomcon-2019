@@ -4,7 +4,7 @@ __author__ =  "Blaze Sanders"
 __email__ =   "blaze.d.a.sanders@gmail.com"
 __company__ = "Ace Monster Toys"
 __status__ =  "Development"
-__date__ =    "Late Updated: 2019-05-29"
+__date__ =    "Late Updated: 2019-06-01"
 __doc__ =     "Class to operate at least 8 servos, 4 relays, and 4 motors at once with latency less then 100 ms"
 
 # Useful documentation:
@@ -39,51 +39,51 @@ import time
 # Allow asynchrous event to occur in parallel pause as needed
 from signal import pause
 
+# Class attributes that can be accessed using ActuatorControl.X (not actuatorcontrol.X)
+MAX_NUM_OF_SERVOS = 8		# Circular servos
+MAX_NUM_OF_MOTORS = 2		# Circular motors
+MAX_NUM_OF_LINEAR_ACT = 4  	# Linear actuators
+N_A = 0				# Not Applicable
+
+# Constant to use to toggle debug print statements ON and OFF
+DEBUG_STATEMENTS_ON = True
+
+# Actuator "forward" direction constants
+CCW = -1  		# Counter-Clockwise
+CW = 1    		# Clockwise
+SERVO_SLACK = 0.2	# Positional accuaracy slack for servo so that control system does not go crazy
+FORWARD = 1
+BACKWARD = -1
+
+# Pin value constants
+LOW =  0
+HIGH = 1
+
+# Wire value constants (interger values don't really matter, but are easy to loop thru)
+NO_PIN = 0  #TODO This constant may not be needed :)
+NO_WIRE = -1
+VCC_5V = "BOARD2"        # 5 Volts @ upto ??? Amps = ??? Watts
+VCC_3_3V = "BOARD1"      # 3.3 Volts @ upto ??? Amps =  ??? Watts
+GND = "BOARD6&9&14&20&25&30&34&39"
+
+PWR_12V = "J10-Pin2"
+LOCK_GND = "J12_Pin1"
+LOCK_PWR = "J12_Pin2"
+
+#RFID P/N ??? Reads & Writes using Wiegand interface usi RPi using 5V
+RFID_D0 = "GREEN_WIRE_J?_Pin?"
+RFID_D1 = "WHITE_WIRE_J?_Pin?"
+
+
+# Raspberry Pi B+ refernce pin constants as defined in ???rc.local script???
+NUM_GPIO_PINS = 8                       # Outputs: GPO0 to GPO3 Inputs: GPI0 to GPI3
+MAX_NUM_A_OR_B_PLUS_GPIO_PINS = 40      # Pins 1 to 40 on Raspberry Pi A+ or B+ or ZERO W
+MAX_NUM_A_OR_B_GPIO_PINS = 26           # Pins 1 to 26 on Raspberry Pi A or B
+NUM_OUTPUT_PINS = 4                     # This software instance of Raspberry Pi can have up to four output pins
+NUM_INPUT_PINS = 4                      # This software instance of Raspberry Pi can have up to four input pins
+
 
 class Actuator:
-
-	# Class attributes that can be accessed using ActuatorControl.X (not actuatorcontrol.X)
-	MAX_NUM_OF_SERVOS = 8		# Circular servos
-	MAX_NUM_OF_MOTORS = 2		# Circular motors
-	MAX_NUM_OF_LINEAR_ACT = 4  	# Linear actuators
-	N_A = 0				# Not Applicable
-
-	# Constant to use to toggle debug print statements ON and OFF
-	DEBUG_STATEMENTS_ON = True
-
-	# Actuator "forward" direction constants
-	CCW = -1  		# Counter-Clockwise
-	CW = 1    		# Clockwise
-	SERVO_SLACK = 0.2	# Positional accuaracy slack for servo so that control system does not go crazy
-	FORWARD = 1
-	BACKWARD = -1
-
-	# Pin value constants
-	LOW =  0
-	HIGH = 1
-
-	# Wire value constants (interger values don't really matter, but are easy to loop thru)
-	NO_PIN = 0  #TODO This constant may not be needed :)
-	NO_WIRE = -1
-	VCC_5V = "BOARD2"        # 5 Volts @ upto ??? Amps = ??? Watts
-	VCC_3_3V = "BOARD1"      # 3.3 Volts @ upto ??? Amps =  ??? Watts
-	GND = "BOARD6&9&14&20&25&30&34&39"
-	
-	PWR_12V = "J10-Pin2"
-	LOCK_GND = "J12_Pin1"
-	LOCK_PWR = "J12_Pin2"
-	
-	#RFID P/N ??? Reads & Writes using Wiegand interface usi RPi using 5V
-	RFID_D0 = "GREEN_WIRE_J?_Pin?"
-	RFID_D1 = "WHITE_WIRE_J?_Pin?"
-	
-
-	# Raspberry Pi B+ refernce pin constants as defined in ???rc.local script???
-	NUM_GPIO_PINS = 8                       # Outputs: GPO0 to GPO3 Inputs: GPI0 to GPI3
-	MAX_NUM_A_OR_B_PLUS_GPIO_PINS = 40      # Pins 1 to 40 on Raspberry Pi A+ or B+ or ZERO W
-	MAX_NUM_A_OR_B_GPIO_PINS = 26           # Pins 1 to 26 on Raspberry Pi A or B
-	NUM_OUTPUT_PINS = 4                     # This software instance of Raspberry Pi can have up to four output pins
-	NUM_INPUT_PINS = 4                      # This software instance of Raspberry Pi can have up to four input pins
 
 	# Class variables
 	currentNumOfActuators = 0

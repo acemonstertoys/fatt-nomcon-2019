@@ -33,11 +33,13 @@ if __name__ == "__main__":
 	# https://aryaboudaie.com/python/technical/educational/web/flask/2018/10/17/flask.html
 	check_call("pip3 install flask", shell=True)
 
-	# Low level control on GPIO pins to drive Servo, Motor, Relays, LED, etc
+	# Low level control on GPIO pins to drive RFID Readers, Servos, Motors, Relays, LEDs, etc
 	# Python 3 install of GPIO and servo to match Flask
 	# https://gpiozero.readthedocs.io/en/stable/installing.html
+	# https://pypi.org/project/RPi.GPIO/
 	if(CONFIG == "Pi3B+"):
 		check_call("sudo apt install python3-gpiozero", shell=True)
+		check_call("pip install RPi.GPIO", shell=True) #Used for RFID Reader
 	elif(CONFIG == "UbuntuOnWindows"):
 		check_call("sudo pip install gpiozero", shell=True)
 	elif(CONFIG == "UbuntuMate"):
@@ -49,6 +51,5 @@ if __name__ == "__main__":
 	else:
 		print("INVALID CONFIG SELECTED")
 
-	#IF GPIO ZERO FAILS AND IS NOT POWERFUL ENOUGH
-	#pip install RPi.GPIO
-	#sudo pip3 install adafruit-circuitpython-motorkit
+	#IF GPIO ZERO &  RPi.GPIO FAIL OR ARE NOT POWERFUL ENOUG
+	#check_call("sudo pip3 install adafruit-circuitpython-motorkit", shell=True)
