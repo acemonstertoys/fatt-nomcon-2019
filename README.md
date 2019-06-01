@@ -1,11 +1,9 @@
 # fatt-nomcon-2019
 Code to control makerspace-auth board items such as LEDs, locks, and motors using Raspbian Stretch with desktop 4.19.42-v7+ SD card
 
-Author: Blaze Sanders Email: b@cafebeep.com Skype: blaze.sanders Twitter: @BlazeDSanders
+Author: Blaze Sanders Skype: blaze.sanders Twitter: @BlazeDSanders
 
-cafeBEEP kiosks are social, modular, and mobile self-contained autonomous cashless coffee kiosks connected to your smartphone. Check out https://www.cafeBEEP.com for more details in the coming months.
-
-This Git repo holds code for many open source libraries. It's broken down into the following directories (***CompressedLibraryCode, PROJETCS***). 
+This Git repo holds code for many open source libraries. It's broken down into the following directories (***CompressedLibraryCode, PROJETCS, makerspace-auth-RedBeard-2019-05-30-1000***). 
 
 Please use https://google.github.io/styleguide/javaguide.html as the coding standard :)
 
@@ -19,3 +17,11 @@ To run the code in the PROIJECTS directory complete the following steps:
 4. Use "cd PROJECTS/MintyBOx" command to navigate to the directory with specific project code
 5. Finally run the command "python3 Driver.py" to start software running
 6. NOTE: Use "python3" and NOT "python", in step 5 or you will get run time errors!!!
+
+***
+makerspace-auth-RedBeard-2019-05-30-1000:
+
+Clone of code from the following GitHub repo as of May 30, 2019 at 10 am PT
+
+***WARNING***
+This code controls the RFID reader. NOT fully tested with  and hardware pins need to be configured.
