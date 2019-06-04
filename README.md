@@ -22,6 +22,7 @@ To run the code in the PROIJECTS directory complete the following steps:
 makerspace-auth-RedBeard-2019-05-30-1000:
 
 Clone of code from the following GitHub repo as of May 30, 2019 at 10 am PT
+https://github.com/brianredbeard/makerspace-auth
 
 ***WARNING***
-This code controls the RFID reader. NOT fully tested with  and hardware pins need to be configured.
+This code controls the RFID reader. NOT fully tested and hardware pins need to be configured.
