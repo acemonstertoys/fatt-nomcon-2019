@@ -10,6 +10,9 @@ __doc__ =     "Main control code for Minty Box project"
 # Modular plug and play control of motors, servos, and relays
 import Actuator
 
+# Custom code to get JSON data from web API and check against white list
+import JSON
+
 # Allow control of output devices such as Motors, Servos, LEDs, and Relays
 from gpiozero import Motor, Servo, LED, Energenie, OutputDevice
 
@@ -30,28 +33,27 @@ GND = "BOARD6"
 
 if __name__  == "__main__":
 
-	print("Start Minty Box Main Function:")
 	# Power LOW side of HiLetGo 5 to 3.3V logic level converter
-	pinPower = OutputDevice(PIN_PWR_3V3) 	# BCM-23
 	pinPower.on()
-
 	print("3.3V pin power on:")
-	time.sleep(3)	# Pause 3 seconds before next test
 
-	print("Unlock:")
+	pinPower = OutputDevice(PIN_PWR_3V3) 	# BCM-23
 	lock = OutputDevice(RELAY_RL1_MAKER_SPACE_AUTH_BOARD_J12) # BCM-6
-	lock.on() 	# Unlock
-	time.sleep(1.5) # Pause 1.5 seconds = 1500 milliseconds
-	lock.off()	# Lock
-	print("Locked:")
 
-	time.sleep(3)	# Pause 3 seconds before next testr
+	while True:
+		print("Start Minty Box Main Function:")
 
-	print("Unlocked:")
-	#TODO
-	#lockPins = [PWR_12V, GND, RELAY_RL1_MAKER_SPACE_AUTH_BOARD_J12]
-	#lock = Actuator("R", lockPins, "X001TEYAM1 Locking", Actuator.CW)
-	#lock.actuate(1.742) # Unlock for 1742 ms
-	print("Locked:")
+		time.sleep(3)	# Pause 3 seconds before next test
 
-	print("End Minty Box Main Function")
+
+		JSON.getJSON()
+
+		print("Unlock:")
+		lock.on() 	# Unlock
+		time.sleep(1.5) # Pause 1.5 seconds = 1500 milliseconds
+		lock.off()	# Lock
+		print("Locked:")
+
+		time.sleep(3)	# Pause 3 seconds before next test
+
+		print("End Minty Box Main Function")
