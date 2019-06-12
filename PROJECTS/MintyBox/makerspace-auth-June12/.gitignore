@@ -1,0 +1,15 @@
+.*.sw[op]
+*~
+
+*.py[co]
+
+*.b#?
+*.s#?
+*.l#?
+*.epf
+
+.DS_Store
+
+*.bak
+cover
+.coverage
