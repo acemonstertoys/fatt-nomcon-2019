@@ -14,15 +14,11 @@ To run the code in the PROIJECTS directory complete the following steps:
 1. Download this FULL git repo onto a Raspberry Pi 3 B+  
 2. Use "cd fatt-nomcon-2019" Linux terminal command to navigate to the highest level directory
 3. Use "python install.py" command to auto install on the necessary libraries
-4. Use "cd PROJECTS/MintyBOx" command to navigate to the directory with specific project code
-5. Finally run the command "python3 Driver.py" to start software running
-6. NOTE: Use "python3" and NOT "python", in step 5 or you will get run time errors!!!
+4. Use "cd PROJECTS/MintyBox/maker space-auth/software" command to navigate to the directory with specific project code
+5. Finally run the command "python MintyBox.py" to start software running
 
 ***
 makerspace-auth-RedBeard-2019-05-30-1000:
 
 Clone of code from the following GitHub repo as of May 30, 2019 at 10 am PT
 https://github.com/brianredbeard/makerspace-auth
-
-***WARNING***
-This code controls the RFID reader. NOT fully tested and hardware pins need to be configured.
