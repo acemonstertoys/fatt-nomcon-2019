@@ -14,7 +14,7 @@ To run the code in the PROIJECTS directory complete the following steps:
 1. Download this FULL git repo onto a Raspberry Pi 3 B+  
 2. Use "cd fatt-nomcon-2019" Linux terminal command to navigate to the highest level directory
 3. Use "python install.py" command to auto install on the necessary libraries
-4. Use "cd PROJECTS/MintyBox/maker space-auth/software" command to navigate to the directory with specific project code
+4. Use "cd PROJECTS/MintyBox/maker space-auth-June12/software" command to navigate to the directory with specific project code
 5. Finally run the command "python MintyBox.py" to start software running
 
 ***
